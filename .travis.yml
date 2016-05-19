@@ -1,4 +1,4 @@
 language: haskell
 install:
   - npm install -g elm
-  - elm-package install
+  - elm-package install -y
