@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Learning Elm",
-    "repository": "https://github.com/sallareznov/elm-playground",
+    "repository": "https://github.com/sallareznov/elm-playground.git",
     "license": "BSD3",
     "source-directories": [
         "src"
