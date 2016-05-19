@@ -2,8 +2,9 @@ import Html exposing (..)
 import Html.App as App
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
-import Task exposing (perform)
+import Task
 import Http
+import Json.Decode as Json
 
 main = App.program { init = init, view = view, update = update, subscriptions = subscriptions }
 
@@ -36,14 +37,14 @@ view model =
     , img [src model.gifUrl] []
     , button [ onClick MorePlease ] [ text "More Please!" ]
     ]
-    
+
 -- SUBSCRIPTIONS
-    
+
 subscriptions : Model -> Sub Msg
 subscriptions model = Sub.none
 
 -- CONTROLLER
-      
+
 getRandomGif : String -> Cmd Msg
 getRandomGif topic =
   let
